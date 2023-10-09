@@ -7,7 +7,7 @@ import { routes } from './routes';
 
 function AppNavigator() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/admin"}>
       <Routes>
         <Route
             key="login"

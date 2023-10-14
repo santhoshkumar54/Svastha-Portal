@@ -6,7 +6,7 @@ import axios from "axios";
 const sessionData = JSON.parse(Cookies.get("auth")??"{}");
 export async function fetchUsers(): Promise<user[]> {
   try {
-    const response = await axios.get<user[]>("/users", {
+    const response = await axios.get<user[]>("/svastha/users", {
       headers: {
         'Authorization': `Bearer ${sessionData?.jwt}`,
       },
@@ -20,7 +20,7 @@ export async function fetchUsers(): Promise<user[]> {
 
 export async function getRoles(): Promise<userRole[]> {
   try {
-    const response = await axios.get<userRole[]>("/roles", {
+    const response = await axios.get<userRole[]>("/svastha/roles", {
       headers: {
         'Authorization': `Bearer ${sessionData?.jwt}`,
       },
@@ -34,7 +34,7 @@ export async function getRoles(): Promise<userRole[]> {
 
 export async function saveUser(userData: createUser): Promise<void> {
   try {
-    const response = await axios.post<user>("/addUsers", userData, {
+    const response = await axios.post<user>("/svastha/addUsers", userData, {
       headers: {
         'Authorization': `Bearer ${sessionData?.jwt}`,
       },

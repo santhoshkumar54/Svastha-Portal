@@ -48,7 +48,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://103.48.180.215:8080/svastha",
   "devDependencies": {
     "@types/js-cookie": "^3.0.4"
   }
